@@ -21,7 +21,8 @@ public class VerificationPage {
         return new DashboardPage();
     }
 
-    public void verifyErrorNotificationVisible() {
-        errorNotification.shouldBe(visible, Duration.ofSeconds(10));
+    public void verifyButtonClick(String verificationCode) {
+        codeField.setValue(verificationCode);
+        verifyButton.click();
     }
 }
