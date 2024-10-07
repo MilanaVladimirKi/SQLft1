@@ -15,8 +15,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
     testImplementation 'mysql:mysql-connector-java:8.0.32'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
-    testImplementation 'io.rest-assured:rest-assured:5.3.1'
-    testImplementation 'com.google.code.gson:gson:2.10.1'
+    testImplementation 'com.codeborne:selenide:6.17.2'
 
     compileOnly 'org.projectlombok:lombok:1.18.28'
     annotationProcessor 'org.projectlombok:lombok:1.18.28'
@@ -26,4 +25,5 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
 }

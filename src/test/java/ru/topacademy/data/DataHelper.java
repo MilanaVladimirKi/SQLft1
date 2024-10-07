@@ -34,7 +34,7 @@ public class DataHelper {
         String code;
     }
 
-    public static VerificationCode verificationCodeGenerate() { return new VerificationCode(faker.numerify()); }
+    public static VerificationCode verificationCodeGenerate() { return new VerificationCode(faker.numerify("#####")); }
 
     @Data
     @NoArgsConstructor
